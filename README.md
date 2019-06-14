@@ -1,7 +1,7 @@
 What is Tripi?
 -------------
 
-Tripi is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Tripi's Bitcoin-like UTXO blockchain. For more general information about Tripi as well as links to join our community, go to https://tripi.org
+Tripi is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Tripi's Bitcoin-like UTXO blockchain. For more general information about Tripi as well as links to join our community, go to https://tripi.io
 
 Welcome to the Tripi Ignition Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on Tripi, we highly recommend using either testnet or regtest mode. 
 
@@ -26,12 +26,12 @@ Basic usage resources:
 * [Unofficial Tripi staking tutorial on Raspberry Pi](https://steemit.com/tripi/@cryptominder/tripi-staking-tutorial-using-tripid-on-a-raspberry-pi-3)
 * [Unofficial Tripi staking tutorial on AWS EC2](https://github.com/aaronmboyd/tripi-staking-on-aws-ec2)
 * [Unofficial guide for keeping your wallet safe](https://steemit.com/tripi/@cryptominder/encrypting-backing-up-and-restoring-your-tripi-wallet)
-* [Block explorer](https://explorer.tripi.org)
+* [Block explorer](https://explorer.tripi.io)
 * [Unofficial block explorer](https://tripiexplorer.io/)
 
 Development resources:
 
-* [Deploying a custom token to Tripi](https://blog.tripi.org/tripi-custom-token-walkthrough-467d725fa27d)
+* [Deploying a custom token to Tripi](https://blog.tripi.io/tripi-custom-token-walkthrough-467d725fa27d)
 * [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-tripi-sparknet-faucet)
 * [Unofficial Tripi Hello World tutorial](https://steemit.com/tripi/@cryptominder/quantum-tripi-blockchain-developer-tutorial-hello-world)
 * [Tripi Book - A Developer's Guide To TRIPI](https://github.com/tripiproject/tripibook)

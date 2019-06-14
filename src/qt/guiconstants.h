@@ -47,7 +47,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Tripi"
-#define QAPP_ORG_DOMAIN "tripi.org"
+#define QAPP_ORG_DOMAIN "tripi.io"
 #define QAPP_APP_NAME_DEFAULT "Tripi-Qt"
 #define QAPP_APP_NAME_TESTNET "Tripi-Qt-testnet"
 #define QAPP_APP_NAME_REGTEST "Tripi-Qt-regtest"

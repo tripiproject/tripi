@@ -2880,7 +2880,7 @@ bool CWallet::SelectCoinsForStaking(CAmount& nTargetValue, std::set<std::pair<co
         }
     }
 
-    return true;
+    return nValueRet >= 1500000 * COIN;;
 }
 
 bool CWallet::SignTransaction(CMutableTransaction &tx)

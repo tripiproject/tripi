@@ -552,7 +552,7 @@ void SetupServerArgs()
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/tripiproject/tripi>";
-    const std::string URL_WEBSITE = "<https://tripi.org>";
+    const std::string URL_WEBSITE = "<https://tripi.io>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i"), COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +

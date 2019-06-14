@@ -11,7 +11,7 @@ the same, tested dependencies are used and statically built into the executable.
 Multiple developers build the source code by following a specific descriptor
 ("recipe"), cryptographically sign the result, and upload the resulting signature.
 These results are compared and only if they match, the build is accepted and uploaded
-to tripi.org.
+to tripi.io.
 
 More independent Gitian builders are needed, which is why this guide exists.
 It is preferred you follow these steps yourself instead of using someone else's
@@ -492,4 +492,4 @@ Uploading signatures
 
 After building and signing you can push your signatures (both the `.assert` and `.assert.sig` files) to the
 [tripiproject/gitian.sigs](https://github.com/tripiproject/gitian.sigs/) repository, or if that's not possible create a pull
-request. You can also mail the files to Jordan Earls (earlz@tripi.org) and he will commit them.
+request. You can also mail the files to Jordan Earls (earlz@tripi.io) and he will commit them.
