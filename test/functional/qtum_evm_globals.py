@@ -5,8 +5,8 @@ from test_framework.util import *
 from test_framework.script import *
 from test_framework.mininode import *
 from test_framework.address import *
-from test_framework.qtum import *
-from test_framework.qtumconfig import *
+from test_framework.tripi import *
+from test_framework.tripiconfig import *
 from test_framework.blocktools import *
 
 from test_framework.address import *
@@ -14,7 +14,7 @@ import sys
 import random
 import time
 
-class QtumEVMGlobalsTest(BitcoinTestFramework):
+class TripiEVMGlobalsTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -48,7 +48,7 @@ class QtumEVMGlobalsTest(BitcoinTestFramework):
             d76c09ad txgasprice()
             2c7622b0 txorigin()
         """
-        self.node.sendtocontract(self.contract_address, "cc5ea9ad", 1, 20000000, QTUM_MIN_GAS_PRICE/COIN, sender)
+        self.node.sendtocontract(self.contract_address, "cc5ea9ad", 1, 20000000, TRIPI_MIN_GAS_PRICE/COIN, sender)
 
         if use_staking:
             for n in self.nodes:
@@ -124,7 +124,7 @@ class QtumEVMGlobalsTest(BitcoinTestFramework):
 
         # tx.gasprice
         print('  tx.gasprice')
-        assert_equal(QTUM_MIN_GAS_PRICE, int(self.get_contract_call_output("d76c09ad"), 16))
+        assert_equal(TRIPI_MIN_GAS_PRICE, int(self.get_contract_call_output("d76c09ad"), 16))
 
         # tx.origin
         print('  tx.origin')
@@ -219,4 +219,4 @@ class QtumEVMGlobalsTest(BitcoinTestFramework):
         self.sync_all()
 
 if __name__ == '__main__':
-    QtumEVMGlobalsTest().main()
+    TripiEVMGlobalsTest().main()

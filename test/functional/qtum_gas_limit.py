@@ -4,14 +4,14 @@ from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import *
 from test_framework.script import *
 from test_framework.mininode import *
-from test_framework.qtum import *
-from test_framework.qtumconfig import *
+from test_framework.tripi import *
+from test_framework.tripiconfig import *
 from test_framework.blocktools import *
 import time
 
 NUM_OUTPUTS = 1000
 
-class QtumGasLimit(BitcoinTestFramework):
+class TripiGasLimit(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -35,7 +35,7 @@ class QtumGasLimit(BitcoinTestFramework):
         # Create a tx with 2000 outputs each with a gas stipend of 5*10^8 calling the contract.
         tx = CTransaction()
         tx.vin = [make_vin(self.node, NUM_OUTPUTS*5*COIN)]
-        tx.vout = [CTxOut(0, CScript([b"\x04", int(5*COIN), QTUM_MIN_GAS_PRICE, b"\x00", bytes.fromhex(contract_address), OP_CALL])) for i in range(NUM_OUTPUTS)]
+        tx.vout = [CTxOut(0, CScript([b"\x04", int(5*COIN), TRIPI_MIN_GAS_PRICE, b"\x00", bytes.fromhex(contract_address), OP_CALL])) for i in range(NUM_OUTPUTS)]
         tx.rehash()
         signed_tx_hex = self.node.signrawtransactionwithwallet(bytes_to_hex_str(tx.serialize()))['hex']
 
@@ -54,4 +54,4 @@ class QtumGasLimit(BitcoinTestFramework):
 
 
 if __name__ == '__main__':
-    QtumGasLimit().main()
+    TripiGasLimit().main()

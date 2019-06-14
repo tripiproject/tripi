@@ -6,7 +6,7 @@ from test_framework.script import *
 from test_framework.mininode import *
 from test_framework.address import *
 
-class QtumGlobalsStateChangerTest(BitcoinTestFramework):
+class TripiGlobalsStateChangerTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -94,4 +94,4 @@ class QtumGlobalsStateChangerTest(BitcoinTestFramework):
         assert_equal(self.node.getblockcount(), block_count+1)
 
 if __name__ == '__main__':
-    QtumGlobalsStateChangerTest().main()
+    TripiGlobalsStateChangerTest().main()

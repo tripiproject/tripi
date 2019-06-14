@@ -247,9 +247,9 @@ class NodeImpl : public Node
     {
         LOCK(::cs_main);
 
-        QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-        blockGasLimit = qtumDGP.getBlockGasLimit(chainActive.Height());
-        minGasPrice = CAmount(qtumDGP.getMinGasPrice(chainActive.Height()));
+        TripiDGP tripiDGP(globalState.get(), fGettingValuesDGP);
+        blockGasLimit = tripiDGP.getBlockGasLimit(chainActive.Height());
+        minGasPrice = CAmount(tripiDGP.getMinGasPrice(chainActive.Height()));
         nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
     }
     void getSyncInfo(int& numBlocks, bool& isSyncing)

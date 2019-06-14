@@ -4,11 +4,11 @@ from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import *
 from test_framework.script import *
 from test_framework.mininode import *
-from test_framework.qtum import *
+from test_framework.tripi import *
 from test_framework.address import *
 import time
 
-class QtumManyValueRefundsFromSameTxTest(BitcoinTestFramework):
+class TripiManyValueRefundsFromSameTxTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -27,10 +27,10 @@ class QtumManyValueRefundsFromSameTxTest(BitcoinTestFramework):
         contract_address = self.node.createcontract(contract_bytecode)['address']
         self.node.generate(1)
         tx = CTransaction()
-        tx.vin = [make_vin(self.node, int(2*(COIN + QTUM_MIN_GAS_PRICE*100000)))]
+        tx.vin = [make_vin(self.node, int(2*(COIN + TRIPI_MIN_GAS_PRICE*100000)))]
         tx.vout = []
-        tx.vout.append(CTxOut(int(COIN), CScript([b"\x04", CScriptNum(100000), CScriptNum(QTUM_MIN_GAS_PRICE), hex_str_to_bytes("00"), hex_str_to_bytes(contract_address), OP_CALL])))
-        tx.vout.append(CTxOut(int(COIN), CScript([b"\x04", CScriptNum(100000), CScriptNum(QTUM_MIN_GAS_PRICE), hex_str_to_bytes("00"), hex_str_to_bytes(contract_address), OP_CALL])))
+        tx.vout.append(CTxOut(int(COIN), CScript([b"\x04", CScriptNum(100000), CScriptNum(TRIPI_MIN_GAS_PRICE), hex_str_to_bytes("00"), hex_str_to_bytes(contract_address), OP_CALL])))
+        tx.vout.append(CTxOut(int(COIN), CScript([b"\x04", CScriptNum(100000), CScriptNum(TRIPI_MIN_GAS_PRICE), hex_str_to_bytes("00"), hex_str_to_bytes(contract_address), OP_CALL])))
 
         signed_tx_raw = self.node.signrawtransactionwithwallet(bytes_to_hex_str(tx.serialize()))['hex']
         self.node.sendrawtransaction(signed_tx_raw)
@@ -39,4 +39,4 @@ class QtumManyValueRefundsFromSameTxTest(BitcoinTestFramework):
         assert_equal(self.node.getblockcount(), block_count+1)
 
 if __name__ == '__main__':
-    QtumManyValueRefundsFromSameTxTest().main()
+    TripiManyValueRefundsFromSameTxTest().main()

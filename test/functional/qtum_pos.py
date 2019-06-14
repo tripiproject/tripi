@@ -12,7 +12,7 @@ from test_framework.key import CECKey
 import io
 import struct
 
-class QtumPOSTest(BitcoinTestFramework):
+class TripiPOSTest(BitcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True
@@ -359,4 +359,4 @@ class QtumPOSTest(BitcoinTestFramework):
         return (block, block_sig_key)
 
 if __name__ == '__main__':
-    QtumPOSTest().main()
+    TripiPOSTest().main()

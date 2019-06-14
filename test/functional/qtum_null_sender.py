@@ -4,10 +4,10 @@ from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import *
 from test_framework.script import *
 from test_framework.mininode import *
-from test_framework.qtum import *
-from test_framework.qtumconfig import *
+from test_framework.tripi import *
+from test_framework.tripiconfig import *
 
-class QtumNullSenderTest(BitcoinTestFramework):
+class TripiNullSenderTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -24,7 +24,7 @@ class QtumNullSenderTest(BitcoinTestFramework):
 
         tx = CTransaction()
         tx.vin = [CTxIn(COutPoint(int(parent_tx_id, 16), 0), scriptSig=CScript([OP_DROP]*20), nSequence=0)]
-        tx.vout = [CTxOut(0, CScript([b"\x04", CScriptNum(1000000), CScriptNum(QTUM_MIN_GAS_PRICE), b"\x00", OP_CREATE]))]
+        tx.vout = [CTxOut(0, CScript([b"\x04", CScriptNum(1000000), CScriptNum(TRIPI_MIN_GAS_PRICE), b"\x00", OP_CREATE]))]
         tx_hex = bytes_to_hex_str(tx.serialize())
         assert_raises_rpc_error(-26, 'bad-txns-invalid-sender-script', self.node.sendrawtransaction, tx_hex)
         block_count = self.node.getblockcount()
@@ -32,4 +32,4 @@ class QtumNullSenderTest(BitcoinTestFramework):
         assert_equal(self.node.getblockcount(), block_count+1)
 
 if __name__ == '__main__':
-    QtumNullSenderTest().main()
+    TripiNullSenderTest().main()

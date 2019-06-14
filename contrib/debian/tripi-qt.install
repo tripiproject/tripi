@@ -1,0 +1,6 @@
+usr/local/bin/tripi-qt usr/bin
+share/pixmaps/tripi32.xpm usr/share/pixmaps
+share/pixmaps/tripi16.xpm usr/share/pixmaps
+share/pixmaps/tripi128.png usr/share/pixmaps
+debian/tripi-qt.desktop usr/share/applications
+debian/tripi-qt.protocol usr/share/kde4/services/
