@@ -125,9 +125,9 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 13140000; // 25 years
-        consensus.BIP16Exception = uint256S("0x0000abceeb856bde46cfb6310c5158f842a9b8531b958ced6c45705bb3ee175d");
+        consensus.BIP16Exception = uint256S("0x0000136369f0082c0f08b3e660349d56c80a144823654fa5ddbc51a72e6a7772");
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x0000abceeb856bde46cfb6310c5158f842a9b8531b958ced6c45705bb3ee175d");
+        consensus.BIP34Hash = uint256S("0x0000136369f0082c0f08b3e660349d56c80a144823654fa5ddbc51a72e6a7772");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -171,13 +171,13 @@ public:
         nDefaultPort = 6888;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1560414073, 99759, 0x1f00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1560734772, 68849, 0x1f00ffff, 1, 50 * COIN);
 
-//        MineGenesis(genesis, consensus.powLimit, true);
+        //MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000abceeb856bde46cfb6310c5158f842a9b8531b958ced6c45705bb3ee175d"));
-        assert(genesis.hashMerkleRoot == uint256S("0xa929546250eba0e1003bf45b474b7410b1c56760751e06ea777e2200139b7c67"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000136369f0082c0f08b3e660349d56c80a144823654fa5ddbc51a72e6a7772"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe38eeec031d981bf4b26c6fa7b9a2033e7d1986f0e31ca0e347435e5d63001d6"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
@@ -203,7 +203,7 @@ public:
 
         checkpointData = {
                 {
-                        { 0, uint256S("0x0000abceeb856bde46cfb6310c5158f842a9b8531b958ced6c45705bb3ee175d")}
+                        { 0, uint256S("0x0000136369f0082c0f08b3e660349d56c80a144823654fa5ddbc51a72e6a7772")}
                         /* { 5000, uint256S("00006a5338e5647872bd91de1d291365e941e14dff1939b5f16d1804d1ce61cd")}, //last PoW block
                          { 45000, uint256S("060c6af680f6975184c7a17059f2ff4970544fcfd4104e73744fe7ab7be14cfc")},
                          { 90000, uint256S("66fcf426b0aa6f2c9e3330cb2775e9e13c4a2b8ceedb50f8931ae0e12078ad50")},
@@ -283,7 +283,7 @@ public:
         nDefaultPort = 13888;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1504695029, 7349697, 0x1f00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1560734125, 96667, 0x1f00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         /*assert(consensus.hashGenesisBlock == uint256S("0x0000e803ee215c0684ca0d2f9220594d3f828617972aad66feb2ba51f5e14222"));
         assert(genesis.hashMerkleRoot == uint256S("0xed34050eb5909ee535fcb07af292ea55f3d2f291187617b44d3282231405b96d"));
