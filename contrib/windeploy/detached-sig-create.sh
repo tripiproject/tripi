@@ -26,7 +26,7 @@ mkdir -p "${OUTSUBDIR}"
 basename -a `ls -1 "${SRCDIR}"/*-unsigned.exe` | while read UNSIGNED; do
   echo Signing "${UNSIGNED}"
   "${OSSLSIGNCODE}" sign -certs "${CERTFILE}" -t "${TIMESERVER}" -in "${SRCDIR}/${UNSIGNED}" -out "${WORKDIR}/${UNSIGNED}" "$@"
-  "${OSSLSIGNCODE}" extract-signature -pem -in "${WORKDIR}/${UNSIGNED}" -out "${OUTSUBDIR}/${UNSIGNED}.pem" && rm "${WORKDIR}/${UNSIGNED}"
+  "${OSSLSIGNCODE}" extract-signature -in "${WORKDIR}/${UNSIGNED}" -out "${OUTSUBDIR}/${UNSIGNED}.pem" && rm "${WORKDIR}/${UNSIGNED}"
 done
 
 rm -f "${OUT}"
