@@ -111,7 +111,7 @@ QT_FORMS_UI = \
   qt/forms/openuridialog.ui \
   qt/forms/optionsdialog.ui \
   qt/forms/overviewpage.ui \
-  qt/forms/qrctoken.ui \
+  qt/forms/trctoken.ui \
   qt/forms/receivecoinsdialog.ui \
   qt/forms/receiverequestdialog.ui \
   qt/forms/receivetokenpage.ui \
@@ -166,7 +166,7 @@ QT_MOC_CPP = \
   qt/moc_overviewpage.cpp \
   qt/moc_peertablemodel.cpp \
   qt/moc_paymentserver.cpp \
-  qt/moc_qrctoken.cpp \
+  qt/moc_trctoken.cpp \
   qt/moc_qvalidatedlineedit.cpp \
   qt/moc_qvalidatedtextedit.cpp \
   qt/moc_qvaluecombobox.cpp \
@@ -274,7 +274,7 @@ BITCOIN_QT_H = \
   qt/paymentserver.h \
   qt/peertablemodel.h \
   qt/platformstyle.h \
-  qt/qrctoken.h \
+  qt/trctoken.h \
   qt/qvalidatedlineedit.h \
   qt/qvalidatedtextedit.h \
   qt/qvaluecombobox.h \
@@ -381,7 +381,7 @@ RES_ICONS = \
   qt/res/icons/contract_output.png \
   qt/res/icons/smart_contract.png \
   qt/res/icons/lock_staking.png \
-  qt/res/icons/qrctoken.png \
+  qt/res/icons/trctoken.png \
   qt/res/icons/add_recipient.png \
   qt/res/icons/encrypt.png \
   qt/res/icons/receive_from.png \
@@ -453,7 +453,7 @@ BITCOIN_QT_WALLET_CPP = \
   qt/overviewpage.cpp \
   qt/paymentrequestplus.cpp \
   qt/paymentserver.cpp \
-  qt/qrctoken.cpp \
+  qt/trctoken.cpp \
   qt/receivecoinsdialog.cpp \
   qt/receiverequestdialog.cpp \
   qt/receivetokenpage.cpp \

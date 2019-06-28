@@ -298,12 +298,12 @@ void BitcoinGUI::createActions()
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(historyAction);
 
-    QRCTokenAction = new QAction(platformStyle->MultiStatesIcon(":/icons/qrctoken"), tr("&QRC Tokens"), this);
-    QRCTokenAction->setStatusTip(tr("QRC Tokens (send, receive or add Tokens in list)"));
-    QRCTokenAction->setToolTip(QRCTokenAction->statusTip());
-    QRCTokenAction->setCheckable(true);
-    QRCTokenAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
-    tabGroup->addAction(QRCTokenAction);
+    TRCTokenAction = new QAction(platformStyle->MultiStatesIcon(":/icons/trctoken"), tr("&TRC Tokens"), this);
+    TRCTokenAction->setStatusTip(tr("TRC Tokens (send, receive or add Tokens in list)"));
+    TRCTokenAction->setToolTip(TRCTokenAction->statusTip());
+    TRCTokenAction->setCheckable(true);
+    TRCTokenAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
+    tabGroup->addAction(TRCTokenAction);
 
     sendTokenAction = new QAction(tr("Send"), this);
     receiveTokenAction = new QAction(tr("Receive"), this);
@@ -495,7 +495,7 @@ void BitcoinGUI::createToolBars()
         tokenActions.append(sendTokenAction);
         tokenActions.append(receiveTokenAction);
         tokenActions.append(addTokenAction);
-        appNavigationBar->mapGroup(QRCTokenAction, tokenActions);
+        appNavigationBar->mapGroup(TRCTokenAction, tokenActions);
         appNavigationBar->buildUi();
         overviewAction->setChecked(true);
     }
@@ -813,21 +813,21 @@ void BitcoinGUI::gotoHistoryPage()
 void BitcoinGUI::gotoSendTokenPage()
 {
     sendTokenAction->setChecked(true);
-    QRCTokenAction->setChecked(true);
+    TRCTokenAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendTokenPage();
 }
 
 void BitcoinGUI::gotoReceiveTokenPage()
 {
     receiveTokenAction->setChecked(true);
-    QRCTokenAction->setChecked(true);
+    TRCTokenAction->setChecked(true);
     if (walletFrame) walletFrame->gotoReceiveTokenPage();
 }
 
 void BitcoinGUI::gotoAddTokenPage()
 {
     addTokenAction->setChecked(true);
-    QRCTokenAction->setChecked(true);
+    TRCTokenAction->setChecked(true);
     if (walletFrame) walletFrame->gotoAddTokenPage();
 }
 

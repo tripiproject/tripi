@@ -137,7 +137,7 @@ private:
     QAction* createContractAction = nullptr;
     QAction* sendToContractAction = nullptr;
     QAction* callContractAction = nullptr;
-    QAction* QRCTokenAction = nullptr;
+    QAction* TRCTokenAction = nullptr;
     QAction* sendTokenAction = nullptr;
     QAction* receiveTokenAction = nullptr;
     QAction* addTokenAction = nullptr;
