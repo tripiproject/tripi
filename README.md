@@ -21,43 +21,16 @@ These are some resources that might be helpful in understanding Tripi. Note that
 
 Basic usage resources:
 
-* [Official Tripi Usage Guide](https://github.com/tripiproject/tripi/wiki/Tripi-Wallet-Tutorial)
-* [Unofficial Tripi staking tutorial](https://steemit.com/tripi/@cryptominder/tripi-staking-tutorial-using-tripi-qt)
-* [Unofficial Tripi staking tutorial on Raspberry Pi](https://steemit.com/tripi/@cryptominder/tripi-staking-tutorial-using-tripid-on-a-raspberry-pi-3)
-* [Unofficial Tripi staking tutorial on AWS EC2](https://github.com/aaronmboyd/tripi-staking-on-aws-ec2)
-* [Unofficial guide for keeping your wallet safe](https://steemit.com/tripi/@cryptominder/encrypting-backing-up-and-restoring-your-tripi-wallet)
-* [Block explorer](https://explorer.tripi.io)
-* [Unofficial block explorer](https://tripiexplorer.io/)
+* [Block explorer](https://track.tripi.io)
+
 
 Development resources:
 
-* [Deploying a custom token to Tripi](https://blog.tripi.io/tripi-custom-token-walkthrough-467d725fa27d)
-* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-tripi-sparknet-faucet)
-* [Unofficial Tripi Hello World tutorial](https://steemit.com/tripi/@cryptominder/quantum-tripi-blockchain-developer-tutorial-hello-world)
 * [Tripi Book - A Developer's Guide To TRIPI](https://github.com/tripiproject/tripibook)
 
 General Info about Tripi:
 
-* [Mainnet event AMA](https://www.reddit.com/r/Tripi/comments/6zs8t0/official_tripi_ama_thread_starts_at_10pm_beijing/)
-* [Tripi's PoS vs CASPER](https://www.reddit.com/r/Tripi/comments/788oa5/tripis_pos_vs_casper_and_the_nothingatstake_problem/)
-* [Technical article explaining Tripi's PoS model in depth](http://earlz.net/view/2017/07/27/1904/the-missing-explanation-of-proof-of-stake-version)
-* [Unofficial What is Tripi article](https://storeofvalue.github.io/posts/what-is-tripi-without-the-bullshit/)
-
-Developer's Tools
------------------
-
-* Smart contract deployment tool
-  * https://github.com/tripiproject/solar
-* DApp JavaScript Library
-  * https://github.com/tripiproject/tripijs
-* A toolkit for building tripi light wallets
-  * https://github.com/tripiproject/tripijs-wallet
-* CORS tripid RPC proxy for DApp
-  * https://github.com/tripiproject/tripiportal
-* Docker images for running tripi services
-  * https://github.com/tripiproject/tripi-docker
-* HTTP API that powers the block explorer and the TRIPI web wallet
-  * https://github.com/tripiproject/insight-api
+* [Tripi - TRIPI.io](https://www.tripi.io)
 
 
 What is Tripi Core?
@@ -68,38 +41,13 @@ Tripi Core is our primary mainnet wallet. It implements a full node and is capab
 Tripi Core currently implements the following:
 
 * Sending/Receiving Tripi
-* Sending/Receiving QRC20 tokens on the Tripi network
+* Sending/Receiving TRC20 tokens on the Tripi network
 * Staking and creating blocks for the Tripi network
 * Creating and interacting with smart contracts
 * Running a full node for distributing the blockchain to other users
 * "Prune" mode, which minimizes disk usage
 * Regtest mode, which enables developers to very quickly build their own private Tripi network for Dapp testing
 * Compatibility with the Bitcoin Core set of RPC commands and APIs
-
-Alternative Wallets
--------------------
-
-Tripi Core uses a full node model, and thus requires downloading the entire blockchain. If you do not need the entire blockchain, and do not intend on developing smart contracts, it may be more ideal to use an alternative wallet such as one of our light wallets that can be synchronized in a matter of seconds. 
-
-### Tripi Electrum
-
-A light wallet that supports the Ledger hardware wallet and is based on the well known Electrum wallet software. 
-
-Download: https://github.com/tripiproject/tripi-electrum/releases
-
-### iOS and Android Wallets
-
-These wallets run on mobile devices and synchronize quickly. 
-
-Android Download: https://play.google.com/store/apps/details?id=org.tripi.wallet
-
-iOS Download: https://github.com/tripiproject/tripi-ios (open source, we are still working with Apple to get approval for their app store)
-
-### Ledger Chrome Wallet
-
-This light wallet runs in your Chrome browser as a browser extension. This wallet requires a Ledger device to use.
-
-How to install: https://ledger.zendesk.com/hc/en-us/articles/115003776913-How-to-install-and-use-Tripi-with-Ledger
 
 
 Building Tripi Core
